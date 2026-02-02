@@ -22,6 +22,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Services - NexGenAiTech">
     <meta name="twitter:description" content="AI Development, Web & Mobile App Development services">
+
+    <!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload -->
+<link rel="preload" href="css/main.css" as="style">
+<link rel="preload" href="js/main.js" as="script">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -1290,5 +1301,13 @@
             });
         });
     </script>
+
+    <!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+</script>
+    
 </body>
 </html>
