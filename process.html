@@ -21,6 +21,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Development Process - NexGenAiTech">
     <meta name="twitter:description" content="6-step development process ensuring quality delivery">
+
+    <!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload -->
+<link rel="preload" href="css/main.css" as="style">
+<link rel="preload" href="js/main.js" as="script">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -970,5 +981,13 @@
             processSteps.forEach(step => observer.observe(step));
         });
     </script>
+
+    <!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+</script>
+    
 </body>
 </html>
