@@ -1,0 +1,20 @@
+[file name]: humans.txt
+[file content begin]
+/* TEAM */
+Founder: Jahid Ansari
+Title: Lead Developer & AI Specialist
+Location: Kushinagar, Uttar Pradesh, India
+Email: nexgenaitech7@gmail.com
+Phone: +91 8055698328
+
+/* SITE */
+Last update: 2026-01-01
+Standards: HTML5, CSS3, JavaScript, PWA
+Components: Custom CSS, Font Awesome, Google Fonts
+Software: VS Code, Git, Adobe XD
+
+/* THANKS */
+Clients: 100+ satisfied businesses
+Projects: 50+ successful deliveries
+Experience: 2+ years in AI & development
+[file content end]
