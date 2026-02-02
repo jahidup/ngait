@@ -1,0 +1,53 @@
+[file name]: .htaccess
+[file content begin]
+# NexGenAiTech Website Configuration
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# WWW to non-WWW (or vice versa based on preference)
+RewriteCond %{HTTP_HOST} ^www\.nexgenaitech\.online [NC]
+RewriteRule ^(.*)$ https://nexgenaitech.online/$1 [L,R=301]
+
+# Security Headers
+Header set X-Content-Type-Options nosniff
+Header set X-Frame-Options DENY
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 day"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>
+
+# Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Block access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+[file content end]
