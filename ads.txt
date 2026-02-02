@@ -1,0 +1,5 @@
+[file name]: ads.txt
+[file content begin]
+# NexGenAiTech - Advertising System
+google.com, pub-XXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+[file content end]
