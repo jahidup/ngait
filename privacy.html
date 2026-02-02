@@ -21,6 +21,17 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Privacy Policy - NexGenAiTech">
     <meta name="twitter:description" content="Data protection and privacy practices">
+
+    <!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload -->
+<link rel="preload" href="css/main.css" as="style">
+<link rel="preload" href="js/main.js" as="script">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -485,5 +496,12 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+
+    <!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+</script>
 </body>
 </html>
