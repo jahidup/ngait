@@ -1,0 +1,28 @@
+[file name]: manifest.json
+[file content begin]
+{
+  "name": "NexGenAiTech - AI & Full-Stack Development",
+  "short_name": "NexGenAiTech",
+  "description": "Professional AI and Full-Stack Development Company founded by Jahid Ansari",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a192f",
+  "theme_color": "#0066cc",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "https://i.ibb.co/5XvqqqpL/Nex-Gen-Ai-Tech-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ],
+  "categories": ["business", "technology", "development"],
+  "lang": "en",
+  "dir": "ltr"
+}
+[file content end]
